@@ -6,14 +6,26 @@
 
     <span class="example-spacer"></span>
     
-    <button mat-button>About</button>
-    <button mat-button>Contact</button>
+    <button mat-button>github</button>
+    <button mat-button>linkedin</button>
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>Menu</button>
   </mat-toolbar-row>
 </mat-toolbar>
 
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>About</button>
+  <button mat-menu-item>Contact</button>
+</mat-menu>
+
 <mat-card>
   <mat-form-field>
-    <input matInput [(ngModel)]="answer" placeholder="Please enter your username">
+    <input matInput [(ngModel)]="username" placeholder="Please enter username">
+  </mat-form-field>
+
+  <br>
+  
+  <mat-form-field>
+    <input type="password" matInput [(ngModel)]="password" placeholder="Please enter password">
   </mat-form-field>
 
   <br>

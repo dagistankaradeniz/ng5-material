@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  answer: string = '';
+  username: string = '';
+  password: string = '';
   answerDisplay: string = '';
   showSpinner: boolean = false;
 
@@ -14,7 +15,7 @@ export class AppComponent {
     this.showSpinner = true;
 
     setTimeout(() => {
-      this.answerDisplay = this.answer;
+      this.answerDisplay = this.username;
       this.showSpinner = false;
     }, 1000);
   }
